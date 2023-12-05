@@ -1,0 +1,211 @@
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas:
+        'nav nav'
+        'aside main'
+        'footer footer';
+}
+
+nav {
+    grid-area: nav;
+    display: grid;
+    place-content: center;
+    background-color: #3b3c3d;
+}
+
+nav h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    color: #f5f4f1;
+    text-shadow: 2px 3px 0px #B38600
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    background-color: #131313;
+}
+
+aside h3 {
+    color: #f5f4f1;
+    margin: 0;
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside ul a {
+    text-decoration: none;
+    color: #f5f4f1;
+}
+
+aside ul a:hover {
+    color: #c5c5c5;
+}
+
+aside ul span {
+    color: #FFC000;
+}
+
+aside .categorias-container {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    overflow-y: auto;
+    padding: 1em;
+    background-color: #f5f4f1;
+}
+
+main .producto-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    background-color: #0070C0;
+    color: #f5f4f1;
+    box-shadow: 5px 5px 5px -5px rgba(51, 51, 51, 1);
+    transition: 0.2s ease;
+    min-width: 290px;
+    max-height: 508px;
+}
+
+main .producto-container:hover {
+    box-shadow: none;
+}
+
+main .producto-container h4 {
+    margin: 0;
+}
+
+main .producto-container .img-container-1,
+.img-container-2,
+.img-container-3,
+.img-container-4,
+.img-container-5,
+.img-container-6 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 25em;
+    border-radius: 1em 1em 0 0;
+}
+
+main .producto-container .img-container-1 {
+    background-image: url('../img/mortal-kombat-anniversary.webp');
+}
+
+main .producto-container .img-container-2 {
+    background-image: url('../img/street-fighter.webp');
+}
+
+main .producto-container .img-container-3 {
+    background-image: url('../img/nba-jam.webp');
+}
+
+main .producto-container .img-container-4 {
+    background-image: url('../img/pac-man.webp');
+}
+
+main .producto-container .img-container-5 {
+    background-image: url('../img/pac-mania.webp');
+}
+
+main .producto-container .img-container-6 {
+    background-image: url('../img/simpsons.webp');
+}
+
+main .producto-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 3;
+}
+
+main .producto-info-container .info {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    text-align: center;
+}
+
+main .producto-info-container .button {
+    width: 100%;
+}
+
+main .producto-info-container a {
+    text-decoration: none;
+}
+
+main .producto-info-container button {
+    width: 100%;
+    height: 2.5em;
+    font-weight: 800;
+    border-radius: 0 0 1em 1em;
+    background-color: #FFC000;
+    cursor: pointer;
+}
+
+main .producto-info-container button:hover {
+    background-color: #dda600;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    place-content: center;
+    background-color: #3b3c3d;
+}
+
+footer a {
+    font-family: 'Press Start 2P', sans-serif;
+    text-decoration: none;
+    color: #f5f4f1;
+    font-size: .5em;
+}
+
+@media (min-width: 0px) {
+        main {
+            grid-template-columns: 1fr;
+            padding: .5em;
+        }
+}
+
+@media (min-width: 768px) {
+        main {
+            grid-template-columns: 1fr 1fr;
+            padding: .5em;
+        }
+}
+
+@media (min-width: 992px) {
+        main {
+            grid-template-columns: 1fr 1fr;
+        }
+}
+
+@media (min-width: 1200px) {
+        main {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+}
